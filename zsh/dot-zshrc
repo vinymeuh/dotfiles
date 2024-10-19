@@ -1,39 +1,19 @@
 # ~/.zshrc
+autoload -U colors && colors
+
 set -o emacs
 
 export LANG=fr_FR.UTF-8
 export LC_MESSAGES=en_US.UTF-8
 
-export PROMPT="%F{220}%n@%m %1~ %#%f "
-
 export EDITOR=vi
 export PAGER=less
 export LESS=-FR
 
-# PATH
 typeset -U path
-path=("$HOME/bin" '/usr/local/bin' $path)
-[ -d "$HOME/.cargo/bin" ] && path=("$HOME/.cargo/bin" $path)
-if [ -d "$HOME/Lang/go/current" ]; then
-    export GOROOT="$HOME/Lang/go/current"
-    export GOPATH="$HOME/Lang/go"
-    path=("$GOPATH/bin" "$GOROOT/bin" $path)
-fi
-if [ -d "$HOME/Lang/zig/current" ]; then
-    path=("$HOME/Lang/zig/current" "$HOME/Lang/zig/zls/zig-out/bin" $path)
-    alias zb='zig build'
-    alias zbr='zig build run'
-    alias zbt='zig build test'
-fi
-export PATH
+path=("$HOME/bin" "/usr/local/bin" $path)
 
-# pyenv
-export PYENV_ROOT=$HOME/.pyenv
-path=("$PYENV_ROOT/bin" $path)
-eval "$(pyenv init -)"
-
-# aliases & functions
-alias cm='chezmoi'
+# basic aliases
 alias cp='cp -i'
 alias df='df -PH'
 alias h='history'
@@ -43,14 +23,21 @@ alias mv='mv -i'
 alias open='xdg-open'
 alias rm='rm -i'
 
-alias az='~/.pyenv/versions/azure-cli/bin/az'
-alias code='~/Applications/VSCode-linux-x64/bin/code --disable-gpu'
-alias hx='helix'
-alias radiogaga='ncmpcpp -h radiogaga.home'
-
-alias nv='nvim'
-alias vi='nvim --clean'
-
-# zsh-autosuggestions plugin
+# standard plugins
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# load custom plugins from ~/.zsh.plugins
+if [[ -f "${HOME}/.zsh.plugins" ]]; then
+  while IFS= read -r plugin || [[ -n "${plugin}" ]]; do
+    if [[ -f "${HOME}/.zsh.plugins.d/${plugin}" ]]; then
+      source "${HOME}/.zsh.plugins.d/${plugin}"
+    else
+      echo "$fg[yellow]WARNING: zsh plugin '${plugin}' not found${reset_color}"
+    fi
+  done < "${HOME}/.zsh.plugins"
+else 
+  echo "$fg[yellow]WARNING: ${HOME}/.zsh.plugins not found${reset_color}"
+fi
+
+# Starship
+eval "$(starship init zsh)"
