@@ -1,1 +1,1 @@
-alias az='~/.pyenv/versions/azure-cli/bin/az'
+source $HOME/bin/az.completion.sh

@@ -1,5 +1,6 @@
 # ~/.zshrc
 autoload -U colors && colors
+autoload -Uz compinit && compinit
 
 set -o emacs
 
