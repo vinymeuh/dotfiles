@@ -19,10 +19,11 @@ config.enable_wayland = false
 -- Colors & Appearance
 config.color_scheme = 'Gruvbox Dark (Gogh)'
 config.window_background_opacity = 0.9
-config.font_size = 11.0
+config.font_size = 13.0
 config.font = wezterm.font_with_fallback({
-  'JetBrains Mono',
+  'IosevkaTerm Nerd Font Propo'
 })
+config.harfbuzz_features = { 'calt=0' } -- disable ligatures
 
 -- Tab bar
 config.use_fancy_tab_bar = true
