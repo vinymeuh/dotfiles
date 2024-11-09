@@ -1,4 +1,4 @@
-path=("$HOME/Lang/zig/current" "$HOME/Lang/zig/zls/zig-out/bin" $path)
+path=("$HOME/Lang/zig/current" $path)
 
 alias zb='zig build'
 alias zbr='zig build run'
