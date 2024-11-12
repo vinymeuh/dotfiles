@@ -1,0 +1,15 @@
+theme = "gruvbox"
+
+[editor]
+cursorline = true
+line-number = "relative"
+
+[editor.whitespace.render]
+newline = "all"
+
+[editor.whitespace.characters]
+newline = "⏎"
+
+[keys.normal]
+C-s = ":w"
+
