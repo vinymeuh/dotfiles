@@ -1,2 +1,5 @@
 cursor-style-blink = false
 shell-integration-features = no-cursor
+# Keybindings
+keybind = ctrl+shift+t=new_tab
+keybind = ctrl+shift+n=new_window
