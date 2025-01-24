@@ -1,8 +1,21 @@
 theme = "gruvbox"
 
 [editor]
+bufferline = "always"
 cursorline = true
+color-modes = true
 line-number = "relative"
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+[editor.statusline]
+left = ["mode", "file-name"]
+center = ["version-control"]
+right = ["file-encoding", "file-line-ending", "file-type", "position"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
 
 [editor.whitespace.render]
 newline = "all"
@@ -12,4 +25,9 @@ newline = "⏎"
 
 [keys.normal]
 C-s = ":w"
+C-c = "toggle_comments"
+C-q = ":buffer-close"
+C-tab = ":buffer-next"
 
+[keys.select]
+C-c = "toggle_comments"
