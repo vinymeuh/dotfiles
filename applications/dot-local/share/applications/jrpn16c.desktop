@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=JRPN 16C
+GenericName=JRPN 16C
+Comment=JRPN 16C
+Exec=/home/viny/Applications/jrpn16/jrpn16
+Icon=/home/viny/Applications/jrpn16/icon256.png
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Utility
