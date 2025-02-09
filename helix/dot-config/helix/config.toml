@@ -23,6 +23,9 @@ newline = "all"
 [editor.whitespace.characters]
 newline = "⏎"
 
+[keys.insert]
+C-s = ["normal_mode", ":w"]
+
 [keys.normal]
 C-s = ":w"
 C-c = "toggle_comments"
