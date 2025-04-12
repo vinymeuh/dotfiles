@@ -4,10 +4,14 @@ theme = "gruvbox"
 bufferline = "always"
 cursorline = true
 color-modes = true
+continue-comments = false
 line-number = "relative"
 
 [editor.inline-diagnostics]
 cursor-line = "warning"
+
+[editor.smart-tab]
+enable = false
 
 [editor.statusline]
 left = ["mode", "file-name"]
@@ -26,6 +30,7 @@ newline = "⏎"
 [keys.insert]
 C-c = "toggle_comments"
 C-s = ["normal_mode", ":w"]
+C-tab = ":buffer-next"
 
 [keys.normal]
 C-c = "toggle_comments"
