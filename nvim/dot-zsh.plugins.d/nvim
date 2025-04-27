@@ -1,3 +1,0 @@
-alias nv='nvim'
-alias vi='nvim --clean'
-alias vim='nvim'
