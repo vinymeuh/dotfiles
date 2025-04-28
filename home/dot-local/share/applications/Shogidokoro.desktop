@@ -2,7 +2,7 @@
 Name=Shogidokoro
 GenericName=Shogidokoro
 Comment=Shogidokoro
-Exec=/home/viny/bin/Shogidokoro
+Exec=bash -c "cd /home/viny/Applications/Shogidokoro && GTK_DATA_PREFIX= mono Shogidokoro.exe"
 Terminal=false
 Type=Application
 StartupNotify=true
