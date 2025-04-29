@@ -1,6 +1,6 @@
 # Dotfiles
 
-This directory contains my personal dotfiles, managed using [GNU stow](https://www.gnu.org/software/stow/). Configurations files are organized by package for easy installation and management.
+This directory contains my personal dotfiles, managed using [GNU stow](https://www.gnu.org/software/stow/).
 
 > **Note**: the base programs themselves need to be installed separately.
 > See [arch-ansible](https://github.com/vinymeuh/arch-ansible).
@@ -14,4 +14,3 @@ cd dotfiles
 stow --dotfiles -S home
 ```
 
-Once everything is set up, you can omit the `--dotfiles` option in future uses of `stow`.
