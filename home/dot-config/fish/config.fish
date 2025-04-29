@@ -21,5 +21,5 @@ if status is-interactive
     # Zig
     fish_add_path -g ~/Lang/zig/current
 
-    fish_add_path -g ~/bin /usr/local/bin
+    fish_add_path -g ~/bin ~/dotfiles/bin /usr/local/bin
 end

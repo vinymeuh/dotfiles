@@ -1,0 +1,6 @@
+[Unit]
+Description=Switch GNOME wallpaper
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/fish -c "switch-gnome-wallpaper"
