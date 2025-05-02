@@ -3,3 +3,6 @@ Description=Hourly switch of GNOME wallpaper
 
 [Timer]
 OnCalendar=hourly
+
+[Install]
+WantedBy=default.target
