@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# A kopia wrapper to manage my backups to external disks and to B2
+# A kopia wrapper to manage my backups to external disks
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Credentials are securely stored in Gnome Keyring
 #  ~> secret-tool store --label 'kopia' kopia password
@@ -14,8 +14,6 @@ PrintHelp() {
     cat << EOF
 Usage:
   backup fs init|setup|snap|list mydocs|myphotos|myraws
-
-  backup b2 init|setup|snap|list mydocs
 EOF
 }
 
@@ -61,7 +59,6 @@ case "$1" in
             *) PrintHelp && exit 1;;
         esac
         ;;
-    b2) Abort "TODO" && exit 1;;
     *) PrintHelp && exit 1;;  
 esac
 
