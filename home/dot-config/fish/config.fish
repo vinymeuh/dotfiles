@@ -1,9 +1,10 @@
 # ~/.config/fish/config.fish
 set -gx LANG fr_FR.UTF-8
-set -gx LC_MESSAGES en_US.UTF-8
 
 if status is-interactive
     set -g fish_greeting
+
+    set -gx LC_MESSAGES en_US.UTF-8
 
     set -gx EDITOR helix
     set -gx PAGER less
