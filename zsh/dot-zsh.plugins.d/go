@@ -1,3 +1,0 @@
-export GOROOT="$HOME/Lang/go/current"
-export GOPATH="$HOME/Lang/go"
-path=("$GOPATH/bin" "$GOROOT/bin" $path)

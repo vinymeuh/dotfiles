@@ -1,3 +1,0 @@
-export PIPX_BIN_DIR="$HOME/bin"
-export PYENV_ROOT="$HOME/.local/share/pyenv"
-#path=("$PYENV_ROOT/bin" $path)
