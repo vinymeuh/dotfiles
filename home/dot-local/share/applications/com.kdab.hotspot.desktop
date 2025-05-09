@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Hotspot
+GenericName=CPU Profiler
+Comment=Linux perf GUI for performance analysis
+Exec=/home/viny/Applications/hotspot/current
+Icon=/home/viny/Applications/hotspot/icon.png
+Categories=Development;
+Keywords=performance;perf;
+MimeType=application/x-perf-data;application/x-hotspot;
